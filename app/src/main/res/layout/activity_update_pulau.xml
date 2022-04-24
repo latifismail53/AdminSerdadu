@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdatePulauAct">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="40dp">
+
+            <ImageView
+                android:id="@+id/updateimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Intopbar"
+                android:adjustViewBounds="true"
+                android:alpha="0.9"
+                android:background="@drawable/img_travelas"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Pulau"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:id="@+id/updatepulau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Pulau"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Pulau"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:id="@+id/updatedeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Deskripsi"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Pulau"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:digits="1234567890"
+                android:inputType="textFilter"
+                android:lines="1"
+                android:id="@+id/updateharga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Harga"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_marginBottom="40dp"
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE!!!!"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

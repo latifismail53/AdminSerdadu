@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/Primarycolor"
+    android:layout_height="match_parent"
+    tools:context=".UpdateOrderAct">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardTopBooking"
+        android:layout_width="match_parent"
+        app:cardElevation="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Primarycolor"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backtohome"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_arrow_back_24"
+                app:iconSize="20dp" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Primarycolor"
+                android:fontFamily="@font/nunito_bold"
+                android:text="#IDBS"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:backgroundTint="@color/Primarycolor"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="8dp"
+                android:text="65656565656"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/CardTopBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardbayar1"
+                app:cardCornerRadius="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center_horizontal|center_vertical"
+                        android:drawableTint="@color/darkgrey"
+                        android:drawableStart="@drawable/ic_tour"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:textAllCaps="true"
+                        android:text="Informasi Pembayaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tanggalPesanan"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:text="Tanggal Pemesanan : 13-04-2022"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/layoutpesan"
+                        android:layerType="hardware"
+                        android:src="@drawable/doots"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Pemesan"
+                        app:startIconDrawable="@drawable/ic_users">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/namapemesan2"
+                            android:text="Nama Pemesan"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        app:startIconDrawable="@drawable/ic_email">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:text="Email Pemesan"
+                            android:id="@+id/emailpemesan2"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="No Handphone"
+                        app:prefixText="(+62)"
+                        app:startIconDrawable="@drawable/ic_handphone">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/hppemesan2"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/layoutpesan"
+                        android:layerType="hardware"
+                        android:src="@drawable/doots"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_weight="1"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            app:startIconDrawable="@drawable/ic_mdi_island"
+                            android:hint="Tujuan">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/namapulau2"
+                                android:editable="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:focusableInTouchMode="false"
+                                android:pointerIcon="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Durasi"
+                            app:suffixText="Hari"
+                            app:startIconDrawable="@drawable/ic_waktu">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/totalhari2"
+                                android:editable="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:focusableInTouchMode="false"
+                                android:pointerIcon="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:suffixText="2022"
+                        android:hint="Tanggal Berangkat - Tanggal Pulang"
+                        app:startIconDrawable="@drawable/ic_calender">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tanggal2"
+                            android:text="19 mar - 20 mar"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardbayar2"
+                app:cardCornerRadius="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center_horizontal|center_vertical"
+                        android:drawableStart="@drawable/ic_ion_ticket"
+                        android:drawableTint="@color/darkgrey"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:textAllCaps="true"
+                        android:text="Konfrimasi Pembayaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layerType="hardware"
+                        android:src="@drawable/doots"/>
+                    <TextView
+                        android:gravity="left|center"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/ic_info2"
+                        android:drawableTint="#F57C00"
+                        android:textColor="@color/black"
+                        android:text="Petunjuk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:gravity="left|center"
+                        android:drawableTint="#F57C00"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/darkgrey"
+                        android:text="@string/petunjukpembayaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layerType="hardware"
+                        android:src="@drawable/doots"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_baseline_account_balance_wallet_24"
+                        app:prefixText="IDR "
+                        android:hint="TOTAL PEMBAYARAN">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:inputType="numberDecimal"
+                            android:id="@+id/totalharga2"
+                            android:text="121212"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bank Pengirim">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:text="Pilih Nama Bank"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusableInTouchMode="false"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Pengirim"
+                        app:helperTextTextColor="@color/red"
+                        app:helperText="*Isi sesuai dengan nama pemilik rekening"
+                        app:startIconDrawable="@drawable/ic_users">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/namapengirim"
+                            android:text="Nama Pengirim"
+                            android:maxLines="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:pointerIcon="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvtest"
+                        android:layout_marginVertical="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <io.github.florent37.shapeofview.shapes.RoundRectView
+                            android:layout_width="match_parent"
+                            android:layout_height="360dp"
+                            android:elevation="4dp"
+                            app:shape_roundRect_bottomLeftRadius="10dp"
+                            app:shape_roundRect_bottomRightRadius="10dp"
+                            app:shape_roundRect_topLeftRadius="10dp"
+                            app:shape_roundRect_topRightRadius="10dp"
+
+                            app:shape_roundRect_borderColor="@android:color/black"
+                            app:shape_roundRect_borderWidth="2dp">
+
+                            <ImageView
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/tiga"
+                                android:id="@+id/gambarbukti"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="Status"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/status2"/>
+                    <!--                   <ImageView-->
+                    <!--                       android:id="@+id/gambarbukti"-->
+                    <!--                       android:layout_width="100dp"-->
+                    <!--                       android:layout_height="100dp"/>-->
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:layout_weight="2"
+                            android:layout_marginRight="3dp"
+                            android:id="@+id/pilihbukti"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Konfirmasi Order"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalhari2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/namapulau2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tanggal2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalharga2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status2"/>
+
+                <ImageView
+                    android:id="@+id/gambarbukti"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+                <Button
+                    android:id="@+id/pilihbukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Bukti Pembayaran"/>
+
+                <Button
+                    android:id="@+id/uploadbukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Bukti Pembayaran"/>-->
+
+
+</RelativeLayout>
+
